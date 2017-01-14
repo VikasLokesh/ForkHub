@@ -207,20 +207,21 @@ public class TypefaceUtils {
      * @param numbers
      * @return max digits
      */
+    /*
     public static int getMaxDigits(int... numbers) {
         int max = 1;
         for (int number : numbers)
             max = Math.max(max, (int) Math.log10(number) + 1);
         return max;
     }
-
+    */
     /**
      * Get width of number of digits
      *
      * @param view
      * @param numberOfDigits
      * @return number width
-     */
+     *//*
     public static int getWidth(TextView view, int numberOfDigits) {
         Paint paint = new Paint();
         paint.setTypeface(view.getTypeface());
@@ -229,7 +230,7 @@ public class TypefaceUtils {
         Arrays.fill(text, '0');
         return Math.round(paint.measureText(text, 0, text.length));
     }
-
+*/
     /**
      * Get octicons typeface
      *

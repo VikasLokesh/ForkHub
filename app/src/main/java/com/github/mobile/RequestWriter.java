@@ -47,10 +47,11 @@ public class RequestWriter {
         version = formatVersion;
     }
 
-    private void createDirectory(final File dir) {
+    CreateDirectory createDir = new CreateDirectory();
+  /*  private void createDirectory(final File dir) {
         if (dir != null && !dir.exists())
             dir.mkdirs();
-    }
+    }*/
 
     /**
      * Write request to file
@@ -63,7 +64,7 @@ public class RequestWriter {
         FileLock lock = null;
         ObjectOutputStream output = null;
         try {
-            createDirectory(handle.getParentFile());
+            createDir.createDirectory((handle.getParentFile()));
             dir = new RandomAccessFile(handle, "rw");
             lock = dir.getChannel().lock();
             output = new ObjectOutputStream(new GZIPOutputStream(
