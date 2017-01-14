@@ -16,7 +16,7 @@ import java.util.Arrays;
  * @param - numberOfDigits
  * @return - number width
  */
-public class DisplayUtils {
+public class DigitFormatUtils {
     public static int getWidth(TextView view, int numberOfDigits) {
         Paint paint = new Paint();
         paint.setTypeface(view.getTypeface());

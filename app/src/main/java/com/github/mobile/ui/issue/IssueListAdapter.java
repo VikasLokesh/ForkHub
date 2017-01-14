@@ -30,7 +30,7 @@ import com.github.kevinsawicki.wishlist.ViewUtils;
 import com.github.mobile.R;
 import com.github.mobile.ui.StyledText;
 import com.github.mobile.util.AvatarLoader;
-import com.github.mobile.util.DisplayUtils;
+import com.github.mobile.util.DigitFormatUtils;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -100,8 +100,8 @@ public abstract class IssueListAdapter<V> extends SingleTypeAdapter<V> {
         int[] numbers = new int[items.length];
         for (int i = 0; i < numbers.length; i++)
             numbers[i] = getNumber((V) items[i]);
-        int digits = Math.max(DisplayUtils.getMaxDigits(numbers), 4);
-        numberWidth = DisplayUtils.getWidth(numberView, digits)
+        int digits = Math.max(DigitFormatUtils.getMaxDigits(numbers), 4);
+        numberWidth = DigitFormatUtils.getWidth(numberView, digits)
                 + numberView.getPaddingLeft() + numberView.getPaddingRight();
     }
 
